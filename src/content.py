@@ -46,7 +46,7 @@ TOPIC = {t[0]: t for t in TOPICS}
 
 def pdf_bar(pid, label=None):
     label = label or "Ladda ned sidan som PDF"
-    return (f'<div class="pdfbar"><a class="btn btn-pdf" href="pdf/{pid}.pdf">{icon("dokument",18)}<span>{label}</span></a>'
+    return (f'<div class="pdfbar"><a class="btn btn-pdf" href="../pdf/{pid}.pdf">{icon("dokument",18)}<span>{label}</span></a>'
             f'<button class="btn btn-ghost" type="button" data-print>Skriv ut</button></div>')
 
 def ul(items, cls="list"):
@@ -91,7 +91,7 @@ PAGES["parkering"] = dict(
  body=f"""
 <div class="grid g3">
  {card("Här får du parkera", "<p>Endast på <b>markerade parkeringsrutor</b> eller i garage.</p>", "ok")}
- {card("Här får du inte parkera", "<p>I gränderna (bara i- och urlastning), längs grönområden och framför garagen.</p><p><b>Gästparkeringen</b> är till för våra gäster. Parkera din egen bil på din plats eller i garaget.</p>", "no")}
+ {card("Här får du inte parkera", "<p>I gränderna (bara i- och urlastning), längs grönområden och framför garagen.</p><p><b>Gästparkeringarna</b> är till för våra gäster. Parkera din egen bil på din plats eller i garaget.</p>", "no")}
  {card("Om allt är fullt", "<p>Parkera uppe på vägen enligt Täby kommuns regler (datumparkering).</p>")}
 </div>
 <h2>Snöröjning av din plats</h2>
@@ -187,13 +187,14 @@ PAGES["dokument"] = dict(
  body=f"""
 <div class="docs">
  <h3>Föreningen</h3>
- <a href="pdf/stadgar.pdf"><b>Stadgar</b><span>Antagna vid årsstämman 1997-09-22</span><em>PDF</em></a>
- <a href="pdf/parkeringsregler.pdf"><b>Ordningsregler för parkering</b><span>Styrelsen</span><em>PDF</em></a>
- <a href="pdf/sopsortering.pdf"><b>Sopsortering vid kärlen</b><span>Informationsblad, A4</span><em>PDF</em></a>
+ <a href="../pdf/stadgar.pdf"><b>Stadgar</b><span>Läsversion, ordagrant avskriven. Antagna vid årsstämman 1997-09-22</span><em>PDF</em></a>
+ <a href="../pdf/stadgar-original.pdf"><b>Stadgar, original</b><span>Skannat original med underskrifter</span><em>PDF</em></a>
+ <a href="../pdf/parkeringsregler.pdf"><b>Ordningsregler för parkering</b><span>Styrelsen</span><em>PDF</em></a>
+ <a href="../pdf/sopsortering.pdf"><b>Sopsortering vid kärlen</b><span>Informationsblad, A4</span><em>PDF</em></a>
  <h3>Årsstämma 2026</h3>
- <a href="pdf/kallelse-arsstamma-2026.pdf"><b>Kallelse med bilagor</b><span>Stämma 28 september 2026, Täby gård</span><em>PDF</em></a>
- <a href="pdf/protokoll-arsstamma-2026.pdf"><b>Protokoll årsstämma 2026</b><span>{tbd("Publiceras när det är justerat")}</span><em>PDF</em></a>
- <a href="pdf/underhallsplan-2026.pdf"><b>Underhålls- och förnyelseplan</b><span>2026/27</span><em>PDF</em></a>
+ <a href="../pdf/kallelse-arsstamma-2026.pdf"><b>Kallelse med bilagor</b><span>Stämma 28 september 2026, Täby gård</span><em>PDF</em></a>
+ <a href="../pdf/protokoll-arsstamma-2026.pdf"><b>Protokoll årsstämma 2026</b><span>{tbd("Publiceras när det är justerat")}</span><em>PDF</em></a>
+ <a href="../pdf/underhallsplan-2026.pdf"><b>Underhålls- och förnyelseplan</b><span>2026/27</span><em>PDF</em></a>
  <h3>Arkiv</h3>
  <a href="https://varinge.wordpress.com/" rel="noopener"><b>Gamla hemsidan</b><span>varinge.wordpress.com – protokoll och inlägg 2011–2014</span><em>Länk</em></a>
 </div>
