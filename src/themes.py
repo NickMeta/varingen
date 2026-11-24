@@ -205,14 +205,14 @@ main{max-width:1240px;margin:0 auto;padding:1.4rem 1.25rem 5rem}
 .cal2 .d b{display:block;font-size:1.25rem}.cal2 .d i{font-style:normal;font-size:.7rem;text-transform:uppercase;color:var(--muted);font-weight:700}
 .cal2 em{font-style:normal;font-size:.75rem;color:var(--muted)}
 .page:not(#hem){margin-top:-.2rem}
-.phead2{background:var(--c);color:var(--on-c,#fff);border-radius:28px;padding:clamp(1.8rem,5vw,3.2rem) clamp(1.5rem,5vw,3.2rem) 5rem;position:relative;overflow:hidden}
+.phead2{background:var(--c);color:var(--on-c,#fff);border-radius:28px;padding:clamp(1.8rem,5vw,3.2rem);position:relative;overflow:hidden}
 .phead2 .ic{width:58px;height:58px;border-radius:18px;background:rgba(255,255,255,.16);display:grid;place-items:center;margin-bottom:1.1rem}
 .phead2 .ic .ico{width:30px;height:30px}
 .phead2 h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800}.phead2 p{font-size:1.15rem;opacity:.86;max-width:52ch;margin:.6rem 0 0}
 .phead2 .num{position:absolute;right:2rem;top:1rem;font-size:8rem;font-weight:800;opacity:.08;line-height:1}
 .page:not(#hem) .pdfbar{margin:-4.2rem clamp(1.5rem,5vw,3.2rem) 0;position:relative}
 .page:not(#hem) .btn-pdf{background:#fff;color:#101317}.page:not(#hem) .btn-ghost{border-color:rgba(255,255,255,.4);color:var(--on-c,#fff)}
-.page:not(#hem) .content{background:var(--surface);border-radius:24px;padding:clamp(1.3rem,4vw,2.6rem);margin-top:2.2rem;border:1px solid var(--line)}
+.page:not(#hem) .content{background:var(--surface);border-radius:24px;padding:clamp(1.3rem,4vw,2.6rem);margin-top:1.2rem;border:1px solid var(--line)}
 .content>h2:first-child,.content>*:first-child{margin-top:0}
 footer{max-width:1240px;margin:0 auto;padding:2rem 1.25rem 3rem;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 @media(max-width:980px){.bento{grid-template-columns:repeat(2,1fr)}.hero2,.row2{grid-template-columns:1fr}}
@@ -234,7 +234,7 @@ def t2_home(colors, logo):
 <div class="row2"><div class="panel"><h2>Aktuellt</h2><div class="newsl">{news}</div></div><div class="panel"><h2>Kalender</h2><div class="cal2">{cal}</div></div></div>'''
 
 def t2_shell(pages, colors, logo):
-    return f'''<header class="bar-top"><div class="in"><a class="brand" href="#hem">{logo("#101317","#101317","#fff",40)}<span>VÄRINGEN<small>Anläggningssamfälligheten</small></span></a>
+    return f'''<header class="bar-top"><div class="in"><a class="brand" href="#hem">{logo("#101317","#101317","#fff",40)}<span>Väringen<small>Anläggningssamfälligheten</small></span></a>
 <nav class="pills" aria-label="Huvudmeny">{nav_links(colors=colors, short=True)}</nav></div></header>
 <main>{pages}</main>
 <footer><span>© Anläggningssamfälligheten Väringen · Runslingan 1–11, Täby</span><span>Styrelsen: <a href="mailto:varingen@proton.me">varingen@proton.me</a> · <a href="#kontakt">Kontakt</a> · <a href="https://varinge.wordpress.com/">Gamla hemsidan</a></span></footer>'''

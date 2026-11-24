@@ -48,7 +48,7 @@ def build(theme):
     for i, (pid, name, short, _c, desc) in enumerate(TOPICS, 1):
         p = PAGES[pid]
         head = theme["page_head"](pid, name, p["lead"], i, colors[pid])
-        pdf = pdf_bar(pid) if pid not in ("forum",) else ""
+        pdf = ""
         pages_html.append(f'<section class="page" id="{pid}" style="{style(pid)}" hidden aria-label="{name}">{head}{pdf}<div class="content">{p["body"]}</div></section>')
     home = theme["home"](colors, logo)
     pages = f'<section class="page" id="hem" style="--c:{theme["accent"]}" aria-label="Start">{home}</section>' + "".join(pages_html)

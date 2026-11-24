@@ -91,7 +91,7 @@ PAGES["parkering"] = dict(
  body=f"""
 <div class="grid g3">
  {card("Här får du parkera", "<p>Endast på <b>markerade parkeringsrutor</b> eller i garage.</p>", "ok")}
- {card("Här får du inte parkera", "<p>I gränderna (bara i- och urlastning), längs grönområden och framför garagen.</p>", "no")}
+ {card("Här får du inte parkera", "<p>I gränderna (bara i- och urlastning), längs grönområden och framför garagen.</p><p><b>Gästparkeringen</b> är till för våra gäster. Parkera din egen bil på din plats eller i garaget.</p>", "no")}
  {card("Om allt är fullt", "<p>Parkera uppe på vägen enligt Täby kommuns regler (datumparkering).</p>")}
 </div>
 <h2>Snöröjning av din plats</h2>

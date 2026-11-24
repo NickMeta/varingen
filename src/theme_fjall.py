@@ -95,14 +95,14 @@ main{max-width:1240px;margin:0 auto;padding:1.4rem 1.25rem 5rem}
 .cal2 .d b{display:block;font-size:1.2rem}.cal2 .d i{font-style:normal;font-size:.68rem;text-transform:uppercase;color:var(--muted);font-weight:700}
 .cal2 em{font-style:normal;font-size:.75rem;color:var(--muted)}
 /* undersidor */
-.phead2{background:var(--c);color:var(--on-c,#fff);border-radius:26px;padding:clamp(1.6rem,4.5vw,2.8rem) clamp(1.4rem,4.5vw,2.8rem) 4.6rem;position:relative;overflow:hidden}
+.phead2{background:var(--c);color:var(--on-c,#fff);border-radius:26px;padding:clamp(1.6rem,4.5vw,2.8rem) clamp(1.4rem,4.5vw,2.8rem) clamp(1.6rem,4.5vw,2.6rem);position:relative;overflow:hidden}
 .phead2 .crumb{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.8;display:flex;align-items:center;gap:.5rem;margin-bottom:.9rem}
 .phead2 .ic{width:50px;height:50px;border-radius:15px;background:rgba(255,255,255,.17);display:grid;place-items:center;margin-bottom:.9rem}
 .phead2 .ic .ico{width:26px;height:26px}
 .phead2 h1{font-size:clamp(2rem,4.6vw,3.1rem);font-weight:800}.phead2 p{font-size:1.1rem;opacity:.9;max-width:56ch;margin:.55rem 0 0}
 .page:not(#hem) .pdfbar{margin:-3.9rem clamp(1.4rem,4.5vw,2.8rem) 0;position:relative}
 .page:not(#hem) .btn-pdf{background:#fff;color:#1b2127}.page:not(#hem) .btn-ghost{border-color:rgba(255,255,255,.45);color:var(--on-c,#fff)}
-.page:not(#hem) .content{background:var(--surface);border-radius:22px;padding:clamp(1.3rem,4vw,2.5rem);margin-top:2rem;border:1px solid var(--line)}
+.page:not(#hem) .content{background:var(--surface);border-radius:22px;padding:clamp(1.3rem,4vw,2.5rem);margin-top:1.2rem;border:1px solid var(--line)}
 .content>*:first-child{margin-top:0}
 footer{background:var(--house);border-top:0}footer a{color:#fff}
 footer .in{max-width:1240px;margin:0 auto;padding:1.6rem 1.25rem 2.2rem;color:#b9c0c9;font-size:.86rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
@@ -208,7 +208,7 @@ def shell(pages, colors, logo):
  });
 })();
 </script>""" % (pg2grp, search_index())
-    return f'''<header class="hdr"><div class="in"><a class="brand" href="#hem">{logo("#ffffff","#ffffff","#101317",42)}<span>VÄRINGEN<small>Anläggningssamfälligheten</small></span></a>
+    return f'''<header class="hdr"><div class="in"><a class="brand" href="#hem">{logo("#ffffff","#ffffff","#101317",42)}<span>Väringen<small>Anläggningssamfälligheten</small></span></a>
 <nav class="gtabs" aria-label="Huvudmeny">{gt}</nav>
 <div class="hsearch">{searchbox("q-top","Sök…")}</div></div></header>
 <nav class="sub" aria-label="Undermeny"><div class="in">{sub}</div></nav>
