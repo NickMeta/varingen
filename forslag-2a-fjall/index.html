@@ -78,7 +78,8 @@ h1,h2,h3{letter-spacing:-.025em}
 .bar-top .in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.6rem 1.25rem}
 .brand svg{flex:none}.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
 .brand small{display:block;font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:0}
-.pills{display:flex;gap:.35rem;overflow-x:auto;scrollbar-width:none;margin-left:auto;padding:.2rem}
+.pills{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.3rem;margin-left:auto;padding:.2rem}
+@media(max-width:980px){.pills{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding-right:2.4rem;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 3rem),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 3rem),transparent)}.bar-top .in{position:relative;flex-wrap:wrap;row-gap:.3rem}.pills{order:3;width:100%;margin-left:0}.bar-top .in:after{content:"›";position:absolute;right:.9rem;bottom:.45rem;font-size:1.6rem;font-weight:700;color:var(--muted);pointer-events:none}}
 .pills a{white-space:nowrap;text-decoration:none;font-size:.82rem;font-weight:600;padding:.45rem .8rem;border-radius:99px;display:flex;align-items:center;gap:.4rem;color:var(--muted)}
 .pills a:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
 .pills a:hover{background:var(--bg);color:var(--ink)}.pills a.active{background:var(--c);color:var(--on-c,#fff)}.pills a.active:before{background:currentColor}
@@ -299,9 +300,9 @@ footer{max-width:1240px;margin:0 auto;padding:2rem 1.25rem 3rem;color:var(--mute
 <dl class="facts"><div><dt>E-post till styrelsen</dt><dd><a href="mailto:varingen@proton.me">varingen@proton.me</a></dd></div><div><dt>Post</dt><dd><span class="tbd">Postadress – bekräftas</span></dd></div></dl>
 <h2>Styrelsen 2026/27</h2>
 <div class="grid g3 people">
- <div class="card "><h3>Emelie Singman, 1C</h3><p>Ordförande · garage</p></div>
- <div class="card "><h3>Nicklas Karpaty, 7A</h3><p>Sekreterare · hemsida</p></div>
- <div class="card "><h3>Alexander Yngve, 9A</h3><p>Kassör · städdagar</p></div>
+ <div class="card "><h3>Emelie Singman, 1C</h3><p>Ordförande</p></div>
+ <div class="card "><h3>Nicklas Karpaty, 7A</h3><p>Sekreterare</p></div>
+ <div class="card "><h3>Alexander Yngve, 9A</h3><p>Kassör</p></div>
 </div>
 <h2>Vem kontaktar jag?</h2>
 <div class="table">
@@ -322,6 +323,7 @@ footer{max-width:1240px;margin:0 auto;padding:2rem 1.25rem 3rem;color:var(--mute
   document.body.setAttribute('data-page',h);
   var t=document.getElementById(h); var c=t&&t.style.getPropertyValue('--c'); if(c) document.body.style.setProperty('--page-c',c);
   window.scrollTo(0,0);
+  var act=document.querySelector('.pills a.active');if(act&&act.parentNode.scrollWidth>act.parentNode.clientWidth){var P=act.parentNode;P.scrollLeft=act.offsetLeft-P.clientWidth/2+act.offsetWidth/2;}
   var m=document.querySelector('.menu-open'); if(m) m.classList.remove('menu-open');
  }
  window.addEventListener('hashchange',show); show();

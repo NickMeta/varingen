@@ -174,7 +174,8 @@ h1,h2,h3{letter-spacing:-.025em}
 .bar-top .in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.6rem 1.25rem}
 .brand svg{flex:none}.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
 .brand small{display:block;font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:0}
-.pills{display:flex;gap:.35rem;overflow-x:auto;scrollbar-width:none;margin-left:auto;padding:.2rem}
+.pills{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.3rem;margin-left:auto;padding:.2rem}
+@media(max-width:980px){.pills{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding-right:2.4rem;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 3rem),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 3rem),transparent)}.bar-top .in{position:relative;flex-wrap:wrap;row-gap:.3rem}.pills{order:3;width:100%;margin-left:0}.bar-top .in:after{content:"›";position:absolute;right:.9rem;bottom:.45rem;font-size:1.6rem;font-weight:700;color:var(--muted);pointer-events:none}}
 .pills a{white-space:nowrap;text-decoration:none;font-size:.82rem;font-weight:600;padding:.45rem .8rem;border-radius:99px;display:flex;align-items:center;gap:.4rem;color:var(--muted)}
 .pills a:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
 .pills a:hover{background:var(--bg);color:var(--ink)}.pills a.active{background:var(--c);color:var(--on-c,#fff)}.pills a.active:before{background:currentColor}

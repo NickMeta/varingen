@@ -293,9 +293,9 @@ footer a{color:#e8d9c0}
 <dl class="facts"><div><dt>E-post till styrelsen</dt><dd><a href="mailto:varingen@proton.me">varingen@proton.me</a></dd></div><div><dt>Post</dt><dd><span class="tbd">Postadress – bekräftas</span></dd></div></dl>
 <h2>Styrelsen 2026/27</h2>
 <div class="grid g3 people">
- <div class="card "><h3>Emelie Singman, 1C</h3><p>Ordförande · garage</p></div>
- <div class="card "><h3>Nicklas Karpaty, 7A</h3><p>Sekreterare · hemsida</p></div>
- <div class="card "><h3>Alexander Yngve, 9A</h3><p>Kassör · städdagar</p></div>
+ <div class="card "><h3>Emelie Singman, 1C</h3><p>Ordförande</p></div>
+ <div class="card "><h3>Nicklas Karpaty, 7A</h3><p>Sekreterare</p></div>
+ <div class="card "><h3>Alexander Yngve, 9A</h3><p>Kassör</p></div>
 </div>
 <h2>Vem kontaktar jag?</h2>
 <div class="table">
@@ -325,6 +325,7 @@ footer a{color:#e8d9c0}
   document.body.setAttribute('data-page',h);
   var t=document.getElementById(h); var c=t&&t.style.getPropertyValue('--c'); if(c) document.body.style.setProperty('--page-c',c);
   window.scrollTo(0,0);
+  var act=document.querySelector('.pills a.active');if(act&&act.parentNode.scrollWidth>act.parentNode.clientWidth){var P=act.parentNode;P.scrollLeft=act.offsetLeft-P.clientWidth/2+act.offsetWidth/2;}
   var m=document.querySelector('.menu-open'); if(m) m.classList.remove('menu-open');
  }
  window.addEventListener('hashchange',show); show();

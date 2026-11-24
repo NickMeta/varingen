@@ -293,9 +293,9 @@ PAGES["kontakt"] = dict(
 {facts([("E-post till styrelsen", '<a href="mailto:varingen@proton.me">varingen@proton.me</a>'),("Post", tbd("Postadress – bekräftas"))])}
 <h2>Styrelsen 2026/27</h2>
 <div class="grid g3 people">
- {card("Emelie Singman, 1C","<p>Ordförande · garage</p>")}
- {card("Nicklas Karpaty, 7A","<p>Sekreterare · hemsida</p>")}
- {card("Alexander Yngve, 9A","<p>Kassör · städdagar</p>")}
+ {card("Emelie Singman, 1C","<p>Ordförande</p>")}
+ {card("Nicklas Karpaty, 7A","<p>Sekreterare</p>")}
+ {card("Alexander Yngve, 9A","<p>Kassör</p>")}
 </div>
 <h2>Vem kontaktar jag?</h2>
 <div class="table">

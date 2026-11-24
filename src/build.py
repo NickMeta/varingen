@@ -28,6 +28,7 @@ ROUTER_JS = """<script>
   document.body.setAttribute('data-page',h);
   var t=document.getElementById(h); var c=t&&t.style.getPropertyValue('--c'); if(c) document.body.style.setProperty('--page-c',c);
   window.scrollTo(0,0);
+  var act=document.querySelector('.pills a.active');if(act&&act.parentNode.scrollWidth>act.parentNode.clientWidth){var P=act.parentNode;P.scrollLeft=act.offsetLeft-P.clientWidth/2+act.offsetWidth/2;}
   var m=document.querySelector('.menu-open'); if(m) m.classList.remove('menu-open');
  }
  window.addEventListener('hashchange',show); show();
