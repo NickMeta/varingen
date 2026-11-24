@@ -208,7 +208,7 @@ def shell(pages, colors, logo):
  });
 })();
 </script>""" % (pg2grp, search_index())
-    return f'''<header class="hdr"><div class="in"><a class="brand" href="#hem">{logo("#ffffff","#ffffff","#101317",42)}<span>Väringen<small>Anläggningssamfälligheten</small></span></a>
+    return f'''<header class="hdr"><div class="in"><a class="brand" href="#hem">{logo("#ffffff","#ffffff","#101317",42)}<span>VÄRINGEN<small>Anläggningssamfälligheten</small></span></a>
 <nav class="gtabs" aria-label="Huvudmeny">{gt}</nav>
 <div class="hsearch">{searchbox("q-top","Sök…")}</div></div></header>
 <nav class="sub" aria-label="Undermeny"><div class="in">{sub}</div></nav>

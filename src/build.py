@@ -75,4 +75,4 @@ if __name__ == "__main__":
     # logga som fristående fil
     os.makedirs(os.path.join(out, "assets"), exist_ok=True)
     open(os.path.join(out, "assets", "logo-varingen.svg"), "w", encoding="utf-8").write(
-        logo("#8e3b2e", "#1f1b16", "#ffffff", 200).replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', 1))
+        logo("#1f1b16", "#1f1b16", "#ffffff", 200).replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', 1))

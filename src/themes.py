@@ -1,3 +1,4 @@
+from photo_b64 import SRC as PHOTO
 # -*- coding: utf-8 -*-
 from content import TOPICS, NEWS, DATES, icon, photo, TOPIC
 
@@ -110,7 +111,7 @@ main{max-width:1120px;margin:0 auto;padding:0 1.25rem 5rem}
 .hero h1{font-size:clamp(2.4rem,5.4vw,4.2rem);font-weight:400;line-height:1.04;letter-spacing:-.01em}
 .hero h1 em{font-style:italic;color:var(--accent)}
 .hero p{font-size:1.15rem;color:var(--muted);max-width:48ch;margin:1.2rem 0 1.6rem}
-.hero .photo{aspect-ratio:4/5;margin:0}
+.hero-img{margin:0;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;box-shadow:0 20px 40px -24px rgba(31,27,22,.5)}.hero-img img{width:100%;height:100%;object-fit:cover;object-position:42% 62%;display:block}
 .btn-solid{background:var(--ink);color:var(--bg)}.btn-line{border-color:var(--ink);color:var(--ink)}
 .sec-title{display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid var(--ink);padding-top:.8rem;margin:3.5rem 0 1.5rem}
 .sec-title h2{font-size:1.6rem}.sec-title span{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
@@ -132,7 +133,7 @@ footer{background:#1f1b16;color:#d9d1c2;padding:3rem 1.25rem}
 footer .in{max-width:1120px;margin:0 auto;display:flex;gap:2rem;justify-content:space-between;flex-wrap:wrap;align-items:center}
 footer .word{font-family:var(--font-head);font-size:1.6rem;color:#fff}footer small{color:#a39a8b}
 footer a{color:#e8d9c0}
-@media(max-width:860px){.hero{grid-template-columns:1fr}.hero .photo{aspect-ratio:16/10}.news,.cal{grid-template-columns:1fr 1fr}.index{grid-template-columns:1fr}.cal div:nth-child(2){border-right:0}.cal div{border-bottom:1px solid var(--line)}}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.hero-img{aspect-ratio:16/10}.news,.cal{grid-template-columns:1fr 1fr}.index{grid-template-columns:1fr}.cal div:nth-child(2){border-right:0}.cal div{border-bottom:1px solid var(--line)}}
 @media(max-width:520px){.news,.cal{grid-template-columns:1fr}}
 """.replace("RUNEBAND", RUNE_BAND)
 
@@ -149,18 +150,18 @@ def t1_home(colors, logo):
 <h1 style="margin-top:.8rem">Tjugoåtta hus. <em>En</em> gemensam gård.</h1>
 <p>Här hittar du allt som rör Väringen – från sophämtning och parkering till städdagar, laddstolpar och årsstämmans protokoll.</p>
 <div style="display:flex;gap:.6rem;flex-wrap:wrap"><a class="btn btn-solid" href="#ny-har">Ny i Väringen</a><a class="btn btn-line" href="#kontakt">Kontakta styrelsen</a></div></div>
-{photo("Foto: Husen på Runslingan – kommer","4/5")}</div>
+<figure class="hero-img"><img src="{PHOTO}" alt="Husen och garagelängorna på Runslingan en solig vårdag"></figure></div>
 <div class="sec-title"><h2>Aktuellt</h2><span>Hösten 2026</span></div><div class="news">{news}</div>
 <div class="sec-title"><h2>Kalender</h2><span>Kommande</span></div><div class="cal">{cal}</div>
 <div class="sec-title"><h2>Allt om föreningen</h2><span>Tretton avsnitt</span></div><div class="index">{idx}</div>'''
 
 def t1_shell(pages, colors, logo):
     return f'''<div class="topline">Anläggningssamfälligheten Väringen · Runslingan 1–11 · Täby</div>
-<header class="masthead"><a href="#hem">{logo("#8e3b2e","#1f1b16","#f5f1e8",76)}<span class="word">Väringen</span><span class="tag">Anläggningssamfälligheten · Täby</span></a></header>
+<header class="masthead"><a href="#hem">{logo("#1f1b16","#1f1b16","#f5f1e8",76)}<span class="word">Väringen</span><span class="tag">Anläggningssamfälligheten · Täby</span></a></header>
 <div class="band"></div>
 <nav class="main" aria-label="Huvudmeny"><div class="in">{nav_links(colors=colors, short=True)}</div></nav>
 <main>{pages}</main>
-<footer><div class="in"><div style="display:flex;gap:1rem;align-items:center">{logo("#c98a6a","#f5f1e8","#1f1b16",48)}<div><div class="word">Väringen</div><small>Anläggningssamfälligheten Väringen · Runslingan 1–11, Täby</small></div></div>
+<footer><div class="in"><div style="display:flex;gap:1rem;align-items:center">{logo("#f5f1e8","#f5f1e8","#1f1b16",48)}<div><div class="word">Väringen</div><small>Anläggningssamfälligheten Väringen · Runslingan 1–11, Täby</small></div></div>
 <div><small>Frågor? <a href="#kontakt">Kontakta styrelsen</a> · <a href="https://varinge.wordpress.com/">Gamla hemsidan</a></small></div></div></footer>'''
 
 # =====================================================================
@@ -233,7 +234,7 @@ def t2_home(colors, logo):
 <div class="row2"><div class="panel"><h2>Aktuellt</h2><div class="newsl">{news}</div></div><div class="panel"><h2>Kalender</h2><div class="cal2">{cal}</div></div></div>'''
 
 def t2_shell(pages, colors, logo):
-    return f'''<header class="bar-top"><div class="in"><a class="brand" href="#hem">{logo("#101317","#101317","#fff",40)}<span>Väringen<small>Anläggningssamfälligheten</small></span></a>
+    return f'''<header class="bar-top"><div class="in"><a class="brand" href="#hem">{logo("#101317","#101317","#fff",40)}<span>VÄRINGEN<small>Anläggningssamfälligheten</small></span></a>
 <nav class="pills" aria-label="Huvudmeny">{nav_links(colors=colors, short=True)}</nav></div></header>
 <main>{pages}</main>
 <footer><span>© Anläggningssamfälligheten Väringen · Runslingan 1–11, Täby</span><span>Styrelsen: <a href="mailto:varingen@proton.me">varingen@proton.me</a> · <a href="#kontakt">Kontakt</a> · <a href="https://varinge.wordpress.com/">Gamla hemsidan</a></span></footer>'''

@@ -101,9 +101,9 @@ PAGES["parkering"] = dict(
 """)
 
 PAGES["laddstolpar"] = dict(
- lead="Under hösten 2026 får varje hushåll tillgång till laddning för elbil i området.",
+ lead="Laddstolparna är nu i drift, och alla hushåll kan ladda elbilen hemma på gården. Information om hur det fungerar har skickats till alla medlemmar och läggs snart in här.",
  body=f"""
-{facts([("Engångsavgift","12 000 kr per hushåll (enligt budget 2026/27)"),("Installation","Hösten 2026"),("Så laddar du", tbd("Instruktion: app/tagg, hur man startar – fylls i")),("Elkostnad", tbd("Hur elen debiteras – fylls i")),("Felanmälan", tbd("Kontakt vid fel – fylls i"))])}
+{facts([("Engångsavgift","12 000 kr per hushåll (enligt budget 2026/27)"),("Status","I drift sedan november 2026"),("Så laddar du", tbd("Instruktion: app/tagg, hur man startar – fylls i")),("Elkostnad", tbd("Hur elen debiteras – fylls i")),("Felanmälan", tbd("Kontakt vid fel – fylls i"))])}
 <h2>Regler för laddning</h2>
 {ul(["Ladda bara vid föreningens laddpunkter.","Dra aldrig sladd från huset över gångvägar eller gemensamma ytor.", "Flytta bilen när den är färdigladdad om laddpunkten delas. " + tbd("bekräfta"), "Egen laddbox? Prata med styrelsen innan du gör något."], "list check")}
 <h2>Vanliga frågor</h2>
@@ -123,10 +123,9 @@ PAGES["projekt"] = dict(
  <li><b>{tbd("Datum")}</b><span>Förslag till beslut på stämma</span></li>
  <li><b>{tbd("Datum")}</b><span>Genomförande</span></li>
 </ol>
-{callout("Vill du vara med?", "<p>Arbetsgruppen leds av Emelie Singman och behöver fler medlemmar. Hör av dig till styrelsen – eller diskutera i forumet.</p>")}
 <h2>Aktuella projekt</h2>
 <div class="projects">
- <div><span class="chip">Pågår</span><b>Laddstolpar</b><p>Installation hösten 2026.</p></div>
+ <div><span class="chip soft">Klart</span><b>Laddstolpar</b><p>I drift. Information har skickats till alla medlemmar.</p></div>
  <div><span class="chip">Pågår</span><b>Träd och häckar</b><p>Dialog med arborist om skadade träd.</p></div>
  <div><span class="chip soft">Utreds</span><b>Vattenmätarbyte</b><p>Styrelsen undersöker upphandling.</p></div>
  <div><span class="chip soft">Utreds</span><b>Parkeringsskyltning</b><p>Alternativ och kostnader tas fram.</p></div>
@@ -152,7 +151,7 @@ PAGES["stadning"] = dict(
  {card("Runslingan 5 och 7","<p>Familjerna i 5C och 7D</p>")}
  {card("Runslingan 9 och 11","<p>Familjerna i 9D och 11B</p>")}
 </div>
-<p>Grändvärdarna håller koll på gränden, kärlen och fördelar snöskottning av omärkta platser. Uppdraget roterar och fastställs på årsstämman.</p>
+<p>Grändvärdarna håller koll på gränden och kärlen och fördelar snöskottning av omärkta platser. På vintern ser de också till att det är skottat runt soptunnorna när det behövs, så att alla kommer fram och sopbilen kan tömma. Uppdraget roterar och fastställs på årsstämman.</p>
 <h2>Gräsklippning och snöröjning</h2>
 <p>Gräsytorna klipper vi själva enligt ett rullande schema – se <a href="#grasklippning">Gräsklippning</a>. Snöröjningen görs av entreprenör; du skottar din egen märkta plats.</p>
 """)
@@ -245,10 +244,11 @@ PAGES["maklare"] = dict(
  ("Fastigheter","28 radhus (Väringen 1–28), lika andelstal"),
  ("Adresser","Runslingan 1–11, Täby kyrkby"),
  ("Årsavgift 2026/27","10 000 kr per fastighet inkl. moms, faktureras kvartalsvis. Kabel-TV och sophämtning ingår."),
- ("Engångsavgift","12 000 kr per hushåll för laddstolpar, hösten 2026"),
+ ("Engångsavgift","12 000 kr per hushåll för laddstolpar (installerade hösten 2026)"),
  ("Underhållsfond","617 740 kr (bokslut 2026-06-30)"),
  ("Föreningen förvaltar","Lekplatser, gångvägar, parkering, garage, kallförråd, serviceledningar, centralantenn, belysning och entrévägar"),
- ("Pågående projekt","Garageprojektet (arbetsgrupp), laddstolpar"),
+ ("Pågående projekt","Garageprojektet"),
+ ("Laddstolpar","I drift sedan november 2026"),
  ("Kontakt","Styrelsen: varingen@proton.me"),
 ])}
 <h2>Vid ägarbyte</h2>
@@ -307,9 +307,8 @@ PAGES["kontakt"] = dict(
 """)
 
 NEWS = [
- ("Hösten 2026","Laddstolpar installeras","Varje hushåll får tillgång till laddning. Engångsavgiften är 12 000 kr.","laddstolpar"),
+ ("November 2026","Laddstolparna är i drift","Nu kan du ladda elbilen hemma på gården. Information har skickats till alla medlemmar och kommer snart även här.","laddstolpar"),
  ("December 2026","Kvartalsfakturan skickas","Fakturan för nästa kvartal skickas ut i början av december.","ny-har"),
  ("Vinter","Skotta din egen plats","Entreprenören röjer området – din märkta plats skottar du själv.","parkering"),
- ("Garageprojektet","Fler i arbetsgruppen","Vill du vara med och forma framtidens garage? Hör av dig.","projekt"),
-]
+ ]
 DATES = [("Dec","2026","Kvartalsfaktura skickas",""),("17","apr","Vårstäddag 2027","prel."),("27","sep","Årsstämma 2027","prel."),("16","okt","Höststäddag 2027","prel.")]
