@@ -406,4 +406,4 @@ THEMES = [
 from theme_fjall import THEME as _FJALL
 THEMES[1].update(folder="forslag-2a-fjall", title="Förslag 2A · Fjäll")
 THEMES[0].update(folder="forslag-1-runsten")
-THEMES[:] = [THEMES[0], THEMES[1], _FJALL]
+THEMES[:] = [THEMES[1], _FJALL]
