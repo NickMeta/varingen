@@ -1,11 +1,10 @@
 # Samfälligheten Väringen: ny hemsida (förslag)
 
-Tre designförslag för styrelsen att diskutera. Alla förslag har samma innehåll.
+Två designförslag för styrelsen att diskutera. Alla förslag har samma innehåll.
 
 ```
 site/
   index.html                 ← översikt med länkar till förslagen
-  forslag-1-runsten/         ← ljus, redaktionell
   forslag-2a-fjall/          ← modern, stora färgkort
   forslag-2b-fjall-flikar/   ← grupperade flikar, sök (huvudspår)
   assets/logo-varingen.svg
